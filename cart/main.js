@@ -8,7 +8,7 @@ let logout=document.querySelector(".logout");
 const quantity=document.querySelector(".quantity");
 logout.addEventListener('click', () => {
   if (confirm("Are you sure you want to log out?")) {
-    window.location = "/index.html";;
+    window.location = "/index.html";
   }
 });
 openShopping.addEventListener('click',()=>{
