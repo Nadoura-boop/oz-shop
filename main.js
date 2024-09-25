@@ -6,6 +6,6 @@ function login() {
         window.alert("Please enter an email address and password");
     }
     else {
-        window.location = "cart/index.html";
+        window.location = "cart/homepage.html";
     }
 }
