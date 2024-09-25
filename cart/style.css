@@ -1,0 +1,271 @@
+:root{
+    --text-color:#123fa8;
+}
+*{
+    font-family: "Inter", sans-serif;
+    list-style: none;
+    text-decoration: none;
+   
+}
+body{
+    background-color:rgba(232, 212, 212, 0.566);
+}
+.container{
+    margin: auto;
+    width: 1000px;
+}
+.container h1{
+    color:var(--text-color);
+    font-size: 1.5rem
+    
+}
+.container header{
+    display: grid;
+    grid-template-columns:1fr 200px ;
+    margin-top: 30px;
+}
+.container .shoppingcart{
+    position: relative;
+    text-align: right;
+
+
+}
+.logout{
+    display: flex;
+    justify-content: flex-end;
+position: relative;
+top: -78px;
+right: 70px;
+
+}
+
+
+i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    transform: all 0.25s ease;
+    color: var(--text-color);
+    margin-top: 30px;
+    
+
+}
+i:hover{
+  
+color: #2960e0c8;
+}
+.shoppingcart span{
+    background-color: red;
+    color: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -23px;
+    left:80%;
+    padding: 2px 10px;
+    margin-top: 30px;
+    width: 7px;
+
+}
+
+.container .list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+.card{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 400px;
+    height: 100vh;
+    transition: 0.5s;
+    background-color: #dadada;
+    border: 1px solid var(--text-color);
+
+     
+}
+.active .card{
+    left: calc(100% - 400px);
+}
+.active .container{
+    transform: translateX(-300px);
+}
+
+.card h1{
+    color: var(--text-color);
+    font-weight: 300;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.card .checkout{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.card .checkout div{
+    background-color: var(--text-color);
+    color: white;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+
+
+}
+
+.list .item{
+    text-align: center;
+    background-color: #efefef;
+   
+    padding: 10px;
+    letter-spacing: 1px;
+    box-shadow: 0px 10px 10px #757676;
+    transition: all .25s ease;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+.list .item img{
+    width: 150px;
+    height: 200px;
+   
+}
+
+.list .item .title{
+    font-weight: 700;
+}
+.list .item .price{
+    margin:5px ;
+   
+}
+.list .item .category{
+    font-weight: 500;
+    margin:5px ;
+
+}
+
+.list .item button{
+    background-color: #efefef;
+    color: var(--text-color);
+font-size: 1rem;
+font-weight: 600;
+width: 100%;
+padding: 10px;
+border: 3px solid var(--text-color);
+border-radius: 8px;
+transition: all .25s ease;
+}
+.list .item button:hover{
+    background-color: var(--text-color);
+    color: #efefef;
+    cursor: pointer;
+}
+.listcard li{
+    display: grid;
+    grid-template-columns: 50px repeat(3,1fr);
+   gap: 20px;
+   row-gap:100px;
+   
+}
+.listcard li .in{ 
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   gap: 30px;
+   
+}
+.listcard li img{
+    width: 40px;
+    mix-blend-mode: multiply;
+  
+
+}
+.listcard .count{
+color: #1f1f25;
+   
+}
+
+.cardtitle,
+.cardPrice{
+    color: #1f1f25;
+    
+   
+}
+.cardbutton{
+    width: 28px;
+    height: 28px;
+    
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.closeshopping,
+.total{
+    border: 3px solid white ;
+}
+
+@media (max-width:500px){
+
+    header .shoppingcart{
+      
+      position: absolute;
+      left:-780px;
+      
+    }
+    .list .item{
+      width: fit-content;
+      
+    }
+    .list .item img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .list .item button{
+        width: fit-content;
+    }
+    .container .list{
+        display: grid;
+        grid-template-columns: repeat(2,0fr);
+       
+    }
+    .card{
+        position:absolute;
+       
+        width: 420px;
+        height: 100%;
+        transition: 0.5s;
+        background-color: #dadada;
+        border: 2px solid var(--text-color);
+    
+         
+    }
+   .card h1{
+       align-items: center;
+       margin: auto;
+    }
+    .active .card{
+       position: absolute;
+       transform: translateX(-30px);
+
+      
+    }
+    
+}
